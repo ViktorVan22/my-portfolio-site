@@ -1,3 +1,9 @@
+## Introduction
+
+使用 Nextjs 搭建我的个人博客网站。
+
+长期维护，目标成为一个精品的个人知识分享网站。
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
