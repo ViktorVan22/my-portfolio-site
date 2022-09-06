@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
+
+.nav {
+  position: sticky;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Ms Madi", cursive;
+  font-size: 48px;
+  font-weight: bolder;
+  padding: 0.8rem;
+}
+
+.nav_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_menu li {
+  list-style: none;
+  padding: 0 1rem;
+  font-size: 20px;
+}
+
+.nav_menu_icon {
+  display: none;
+}
+.nav_menu_icon i {
+  font-size: 30px;
+  opacity: 0.5;
+  padding: 0.3rem;
+}
+
+.nav_option i {
+  font-size: 22px;
+  opacity: 0.5;
+}
+
+.nav_menu_icon i:hover,
+.nav_menu_icon i:focus {
+  border: 2px solid gray;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+#home:hover {
+  color: #c0392b;
+  transition: all 0.5s ease;
+}
+
+.toggle_menu_container {
+  min-width: 140px;
+  position: absolute;
+  right: 10px;
+  top: 80px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 0 0.5rem;
+}
+
+.toggle_menu_container li {
+  list-style: none;
+  padding: 1rem 0.3rem;
+  text-align: center;
+}
+
+.toggle_menu_container li:hover {
+  color: #c0392b;
+}
+
+@media screen and (max-width: 750px) {
+  .logo {
+    font-size: 40px;
+  }
+  .nav_option {
+    display: none;
+  }
+  .container {
+    width: 100%;
+  }
+  .logo {
+    padding: 1rem;
+  }
+  .nav_menu_icon {
+    display: flex;
+    padding: 0 1.5rem;
+  }
+  .container {
+    justify-content: space-between;
+  }
+}
