@@ -2,3 +2,14 @@
   background-color: transparent;
   border: none;
 }
+
+.mode_button i {
+  color: var(--element1);
+}
+
+.mode_button:hover i {
+  border: 2px solid var(--tertiary, #fff7d6);
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}

@@ -15,11 +15,11 @@ const Home: NextPage = () => {
         />
       </Head>
       <Navbar />
-      <div className="homepage-container">
-        <header className="homepage-header">
+      <div className={styles.container}>
+        <header className={styles.header}>
           <h1>Viktor Zhao</h1>
         </header>
-        <main className="homepage-main">
+        <main className={styles.main}>
           <p>
             Hey, I am Viktor Zhao, a junior-level front-end engineer with less
             than a year work experience. Working hard towards becoming a
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           </p>
           <p>I have a bachelor degree on economics, majored in finance. </p>
           <p>
-            Outside of programming, I enjoy playing badminton and traveling.{" "}
+            Outside of programming, I enjoy playing badminton and traveling.
           </p>
           <p>
             Find me on{" "}
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
             sponsoring website, not yet)
           </p>
         </main>
-        <footer className="homepage-footer">备案信息</footer>
+        <footer className={styles.footer}>备案信息</footer>
 
         <p>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

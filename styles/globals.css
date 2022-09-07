@@ -1,12 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,300&display=swap");
 
+:root[color-mode="light"] {
+  --surface1: #ffffff;
+  --surface2: #f2f2f2;
+  --element1: #000000;
+  --element2: #222222;
+  --element3: #333333;
+  --elementInverse: #eee;
+  --primary: #01408e;
+  --secondary: #3c5d5c;
+  --tertiary: black;
+  --box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
+}
+
+:root[color-mode="dark"] {
+  --surface1: #262626;
+  --surface2: #333333;
+  --surface3: #404040;
+  --element1: #eeeeee;
+  --element2: #dddddd;
+  --element3: #cccccc;
+  --elementInverse: #111;
+  --primary: #8fceff;
+  --secondary: #72faca;
+  --tertiary: #eee8a9;
+  --box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "IBM Plex Mono", monospace;
-
   background-color: white;
+  background-color: var(--surface1, #fff);
 }
 
 a {
