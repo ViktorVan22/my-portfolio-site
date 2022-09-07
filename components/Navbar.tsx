@@ -14,16 +14,17 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    const hideNavMenu = () => {
-      if (window.scrollY > 100) {
-        setHide(true);
-      } else {
-        setHide(false);
-      }
-    };
     window.addEventListener("scroll", hideNavMenu);
     return () => window.removeEventListener("scroll", hideNavMenu);
-  }, [hide, setHide]);
+  }, []);
+
+  const hideNavMenu = () => {
+    if (window.scrollY > 100) {
+      setHide(true);
+    } else {
+      setHide(false);
+    }
+  };
 
   const locateTo = (url: string) => {
     window.open(url);
@@ -51,11 +52,11 @@ function Navbar() {
                   onClick={() => locateTo("https://github.com/ViktorVan22")}
                 ></i>
               </li>
-              <li className={styles.nav_option}>
-                <DarkMode />
-              </li>
             </>
           )}
+          <li className={styles.nav_option}>
+            <DarkMode />
+          </li>
         </div>
         <div
           className={styles.nav_menu_icon}
