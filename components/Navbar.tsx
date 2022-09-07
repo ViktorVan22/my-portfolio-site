@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Navbar.module.css";
+import DarkMode from "./DarkMode";
 
 function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
   const [hide, setHide] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -24,10 +24,6 @@ function Navbar() {
     window.addEventListener("scroll", hideNavMenu);
     return () => window.removeEventListener("scroll", hideNavMenu);
   }, [hide, setHide]);
-
-  const switchMode = () => {
-    setDarkMode(!darkMode);
-  };
 
   const locateTo = (url: string) => {
     window.open(url);
@@ -55,12 +51,8 @@ function Navbar() {
                   onClick={() => locateTo("https://github.com/ViktorVan22")}
                 ></i>
               </li>
-              <li className={styles.nav_option} onClick={switchMode}>
-                {darkMode ? (
-                  <i className="iconfont icon-moon"></i>
-                ) : (
-                  <i className="iconfont icon-sun"></i>
-                )}
+              <li className={styles.nav_option}>
+                <DarkMode />
               </li>
             </>
           )}
@@ -84,12 +76,8 @@ function Navbar() {
                     onClick={() => locateTo("https://github.com/ViktorVan22")}
                   ></i>
                 </li>
-                <li className={styles.nav_menu_option} onClick={switchMode}>
-                  {darkMode ? (
-                    <i className="iconfont icon-moon"></i>
-                  ) : (
-                    <i className="iconfont icon-sun"></i>
-                  )}
+                <li className={styles.nav_menu_option}>
+                  <DarkMode />
                 </li>
               </div>
             </div>
